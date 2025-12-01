@@ -1,12 +1,15 @@
-/* =====================================
-   PROFILE — Diamond (45° Rotated) Image
-===================================== */
+/* ===========================
+   PROFILE SECTION
+=========================== */
 .profile-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
-  padding: 40px 20px;
+  min-height: 75vh;
+  padding: 60px 20px 40px;
+  gap: 60px;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 18px 18px;
 }
 
 /* Kiri */
@@ -16,66 +19,107 @@
   justify-content: center;
 }
 
-/* Frame kotak diputar */
 .diamond-frame {
   width: 280px;
   height: 280px;
   transform: rotate(45deg);
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
-  border: 5px solid white;
+  border-radius: 24px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+  border: 6px solid white;
 }
 
-/* Gambar di dalam frame DIROTASI BALIK agar normal */
 .diamond-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: rotate(-45deg) scale(1.2);
+  transform: rotate(-45deg) scale(1.25);
 }
 
 /* Kanan */
 .profile-info {
   flex: 1;
-  padding-left: 40px;
 }
 
-.profile-info .name {
-  font-size: 40px;
+.name {
+  font-size: 44px;
   font-weight: 800;
   background: linear-gradient(90deg, #2b71ff, #3ab5ff);
   color: transparent;
   -webkit-background-clip: text;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-.profile-info .role {
-  font-size: 22px;
-  color: #555;
+.wave {
+  display: inline-block;
+  animation: wave-emoji 1.8s infinite ease-in-out;
+  transform-origin: 70% 70%;
+  color: yellow;
 }
 
-/* Subtitle kecil italic */
+@keyframes wave-emoji {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(18deg);
+  }
+  30% {
+    transform: rotate(-12deg);
+  }
+  45% {
+    transform: rotate(18deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 26px;
+  background: linear-gradient(90deg, #2b71ff, #3ab5ff);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(43, 113, 255, 0.35);
+  transition: 0.25s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(43, 113, 255, 0.45);
+}
+
+.download-btn:active {
+  transform: scale(0.97);
+}
+
 .subtitle {
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
   color: #666;
-  margin-top: 8px;
+  margin-bottom: 15px;
 }
 
 /* Logo teknologi */
 .tech-stack {
   display: flex;
   gap: 18px;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .tech-stack img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  transition: 0.2s ease;
+  width: 38px;
+  height: 38px;
   opacity: 0.85;
+  transition: 0.2s ease;
 }
 
 .tech-stack img:hover {
@@ -83,61 +127,52 @@
   opacity: 1;
 }
 
-.reveal {
+.about-section {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 18px 18px;
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.9s ease;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  gap: 20px;
+  overflow: hidden; /* supaya animasi rapi */
 }
 
-.reveal.show {
+.about-section.show {
   opacity: 1;
-  padding-top: 0px;
   transform: translateY(0);
 }
 
-#about {
-  margin-top: 0px;
-}
-
-#about .title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #1f1f1f;
-  text-align: center;
-}
-
-#about .title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  margin: 12px auto 0;
+.about-section .title {
+  font-size: 36px;
+  font-weight: 800;
   background: linear-gradient(90deg, #2b71ff, #3ab5ff);
-  border-radius: 2px;
+  color: transparent;
+  -webkit-background-clip: text;
+  margin: 0px;
 }
 
-#about .text {
-  max-width: 800px;
-  margin: 0px auto 0;
-  text-align: justify;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #505050;
-  background: #ffffff;
-  padding: 28px 32px;
+.about-section .text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 850px;
+  margin: 0px;
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 768px) {
   .profile-wrapper {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-info {
-    padding-left: 0;
-    margin-top: 20px;
+    gap: 30px;
+    padding-top: 40px;
   }
 
   .diamond-frame {
@@ -145,8 +180,19 @@
     height: 220px;
   }
 
-  .profile-info .name {
+  .name {
     font-size: 34px;
   }
 
+  .about-section {
+    min-height: auto;
+  }
+
+  .about-section .title {
+    font-size: 28px;
+  }
+
+  .about-section .text {
+    font-size: 16px;
+  }
 }

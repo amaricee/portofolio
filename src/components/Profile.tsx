@@ -15,7 +15,9 @@ function Profile() {
       </div>
 
       <div className="profile-info">
-        <h1 className="name">Muhammad Ramadan</h1>
+        <h1 className="name">
+          <span className="wave">👋</span> Hi, I'm Rama
+        </h1>
 
         <p className="subtitle">Web Developer & Creative Learner</p>
 
@@ -26,6 +28,10 @@ function Profile() {
           <img src={laravelLogo} alt="Laravel" />
           <img src={mysqlLogo} alt="MySQL" />
         </div>
+
+        <a href="/CV.pdf" download className="download-btn">
+          Resume
+        </a>
       </div>
     </section>
   );
