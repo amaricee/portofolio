@@ -1,42 +1,152 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* =====================================
+   PROFILE — Diamond (45° Rotated) Image
+===================================== */
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 40px 20px;
+}
+
+/* Kiri */
+.profile-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Frame kotak diputar */
+.diamond-frame {
+  width: 280px;
+  height: 280px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  border: 5px solid white;
+}
+
+/* Gambar di dalam frame DIROTASI BALIK agar normal */
+.diamond-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(-45deg) scale(1.2);
+}
+
+/* Kanan */
+.profile-info {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.profile-info .name {
+  font-size: 40px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #2b71ff, #3ab5ff);
+  color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 10px;
+}
+
+.profile-info .role {
+  font-size: 22px;
+  color: #555;
+}
+
+/* Subtitle kecil italic */
+.subtitle {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Logo teknologi */
+.tech-stack {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.tech-stack img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: 0.2s ease;
+  opacity: 0.85;
+}
+
+.tech-stack img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  padding-top: 0px;
+  transform: translateY(0);
+}
+
+#about {
+  margin-top: 0px;
+}
+
+#about .title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1f1f1f;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#about .title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, #2b71ff, #3ab5ff);
+  border-radius: 2px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+#about .text {
+  max-width: 800px;
+  margin: 0px auto 0;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #505050;
+  background: #ffffff;
+  padding: 28px 32px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-wrapper {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .profile-info {
+    padding-left: 0;
+    margin-top: 20px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .diamond-frame {
+    width: 220px;
+    height: 220px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .profile-info .name {
+    font-size: 34px;
+  }
 
-.read-the-docs {
-  color: #888;
 }
