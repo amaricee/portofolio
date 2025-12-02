@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import "./About.css";
+import { Link } from "react-router-dom";
 
-function About() {
+function AboutPreview() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -25,20 +26,21 @@ function About() {
   return (
     <section id="about" className="about-section reveal" ref={aboutRef}>
       <h2 className="title">About Me</h2>
+
       <p className="text">
         With around one year of experience in web development using JavaScript,
-        Laravel, Go, React, and MySQL. I enjoy working independently or in a
-        team, adapt quickly, and focus on creating innovative and impactful
-        digital solutions.
+        Laravel, Go, React, and MySQL. I enjoy working independently or in a team,
+        adapt quickly, and focus on creating innovative and impactful digital
+        solutions.
       </p>
 
       <div className="about-links">
-        <a href="#about" className="see-more-text">
+        <Link to="/about" className="see-more-text">
           See more about me →
-        </a>
+        </Link>
       </div>
     </section>
   );
 }
 
-export default About;
+export default AboutPreview;
