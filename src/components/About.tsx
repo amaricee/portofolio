@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import "./About.css";
 
 function About() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -25,12 +26,17 @@ function About() {
     <section id="about" className="about-section reveal" ref={aboutRef}>
       <h2 className="title">About Me</h2>
       <p className="text">
-        With around one year of experience in Informatics Engineering, I
-        specialize in web development using HTML, CSS, JavaScript, Laravel, Go,
-        React, and MySQL. I enjoy working independently or in a team, adapt
-        quickly, and focus on creating innovative and impactful digital
-        solutions.
+        With around one year of experience in web development using JavaScript,
+        Laravel, Go, React, and MySQL. I enjoy working independently or in a
+        team, adapt quickly, and focus on creating innovative and impactful
+        digital solutions.
       </p>
+
+      <div className="about-links">
+        <a href="#about" className="see-more-text">
+          See more about me →
+        </a>
+      </div>
     </section>
   );
 }

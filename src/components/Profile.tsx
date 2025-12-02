@@ -4,6 +4,7 @@ import reactLogo from "../assets/react.svg";
 import jsLogo from "../assets/js.svg";
 import laravelLogo from "../assets/laravel.svg";
 import mysqlLogo from "../assets/mysql.svg";
+import "./Profile.css";
 
 function Profile() {
   return (
@@ -29,9 +30,11 @@ function Profile() {
           <img src={mysqlLogo} alt="MySQL" />
         </div>
 
-        <a href="/CV.pdf" download className="download-btn">
-          Resume
-        </a>
+        <div className="profile-links">
+          <a href="/CV.pdf" download className="download-btn">
+            Resume
+          </a>
+        </div>
       </div>
     </section>
   );

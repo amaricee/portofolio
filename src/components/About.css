@@ -1,0 +1,70 @@
+.about-section {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  gap: 20px;
+  overflow: hidden; /* supaya animasi rapi */
+}
+
+.about-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section .title {
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #2b71ff, #3ab5ff);
+  color: transparent;
+  -webkit-background-clip: text;
+  margin: 0px;
+}
+
+.about-section .text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 850px;
+  margin: 0px;
+}
+
+.about-links {
+  flex-direction: column; /* pastikan vertikal */
+  gap: 12px; /* jarak antara tombol dan teks */
+}
+
+.see-more-text {
+  display: flex;
+  font-size: 15px;
+  color: #2b71ff;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.see-more-text:hover {
+  color: #3ab5ff;
+  transform: translateY(-3px);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    min-height: auto;
+  }
+
+  .about-section .title {
+    font-size: 28px;
+  }
+
+  .about-section .text {
+    font-size: 16px;
+  }
+}
