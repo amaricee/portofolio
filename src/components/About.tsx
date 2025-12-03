@@ -25,13 +25,14 @@ function AboutPreview() {
 
   return (
     <section id="about" className="about-section reveal" ref={aboutRef}>
-      <h2 className="title">About Me</h2>
-
       <p className="text">
-        With around one year of experience in web development using JavaScript,
-        Laravel, Go, React, and MySQL. I enjoy working independently or in a team,
-        adapt quickly, and focus on creating innovative and impactful digital
-        solutions.
+        Hello! My name is Muhammad Ramadan, an Informatics Engineering graduate
+        with approximately one year of experience in web development using
+        JavaScript, Laravel, Go, React, and MySQL. I am able to work both
+        independently and collaboratively, adapt quickly to new challenges, and
+        consistently focus on creating innovative and impactful digital
+        solutions. I enjoy the process of developing modern and efficient web
+        applications while ensuring a smooth and meaningful user experience.
       </p>
 
       <div className="about-links">

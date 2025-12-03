@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   min-height: 75vh;
-  padding: 60px 20px 40px;
+  padding: 60px 20px 50px;
   gap: 60px;
   background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 18px 18px;
@@ -132,16 +132,84 @@
 }
 
 
+/* ====================== */
+/*      RESPONSIVE        */
+/* ====================== */
+
+/* Tablet Landscape (max 1024px) */
+@media (max-width: 1024px) {
+  .profile-wrapper {
+    gap: 40px;
+    padding: 50px 20px;
+  }
+
+  .name {
+    font-size: 38px;
+  }
+
+  .diamond-frame {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* Tablet Portrait & HP Lebar (max 768px) */
 @media (max-width: 768px) {
-  .about-section {
+  .profile-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
     min-height: auto;
+    padding: 60px 20px;
   }
 
-  .about-section .title {
-    font-size: 28px;
+  .diamond-frame {
+    width: 220px;
+    height: 220px;
   }
 
-  .about-section .text {
-    font-size: 16px;
+  .name {
+    font-size: 32px;
+  }
+
+  .tech-stack img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* HP Kecil (max 480px) */
+@media (max-width: 480px) {
+  .profile-wrapper {
+    padding: 50px 16px;
+    gap: 28px;
+  }
+
+  .diamond-frame {
+    width: 180px;
+    height: 180px;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .tech-stack {
+    justify-content: center; /* bikin logo center */
+    gap: 14px;
+  }
+
+  .tech-stack img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .download-btn {
+    padding: 10px 22px;
+    font-size: 14px;
   }
 }

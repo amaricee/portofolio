@@ -1,0 +1,82 @@
+.projects-section {
+  padding: 80px 50px;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Title rata kiri */
+.projects-section .title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #444; /* ABU-ABU */
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+
+.project-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.project-card {
+  width: 400px; /* <= BATAS LEBAR CARD */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Gambar*/
+.project-image {
+  width: 100%;       /* ikut lebar card */
+  height: 200px;     /* diperkecil */
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: 0.25s ease;
+}
+
+.project-image:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Button More Info */
+.more-info-btn {
+  padding-top: 10px;
+  display: inline-block;
+  font-size: 15px;
+  color: #2b71ff;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.more-info-btn:hover {
+  color: #3ab5ff;
+  transform: translateY(-2px);
+  text-decoration: underline;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .project-image {
+    width: 300px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section .title {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .project-image {
+    width: 240px;
+    height: 150px;
+  }
+}

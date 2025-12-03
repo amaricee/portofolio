@@ -24,12 +24,13 @@
   font-weight: 800;
   background: linear-gradient(90deg, #2b71ff, #3ab5ff);
   color: transparent;
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   margin: 0px;
 }
 
 .about-section .text {
+  padding-top: 20px;
   font-size: 18px;
   line-height: 1.7;
   color: #555;
@@ -56,9 +57,25 @@
   text-decoration: underline;
 }
 
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 0 20px;
+    min-height: 10vh;
+  }
+
+  .about-section .title {
+    font-size: 32px;
+  }
+
+  .about-section .text {
+    font-size: 17px;
+    max-width: 700px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
-    min-height: auto;
+    padding: 0 16px;
   }
 
   .about-section .title {
@@ -67,5 +84,25 @@
 
   .about-section .text {
     font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 0 14px;
+    gap: 16px;
+  }
+
+  .about-section .title {
+    font-size: 24px;
+  }
+
+  .about-section .text {
+    font-size: 13px;
+  }
+
+  .see-more-text {
+    font-size: 14px;
   }
 }
