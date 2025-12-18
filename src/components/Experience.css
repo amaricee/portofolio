@@ -1,0 +1,136 @@
+.experience-section {
+  padding: 80px 70px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.experience-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-section .title {
+  font-size: 20px;
+  font-weight: 800;
+  color: black;
+  opacity: 50%;
+  width: 200px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  position: sticky;
+  top: 40px;
+  z-index: 3;
+  background: #fff; 
+}
+
+/* Wrapper */
+.experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  /* 🔥 Agar berada di kanan */
+  flex: 1;
+}
+
+/* Item */
+.experience-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 0px;
+  position: relative;
+  width: fit-content;
+
+  /* 🔥 GRADIENT TEXT */
+  background: linear-gradient(90deg, #2b71ff, #3ab5ff);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* 🔥 UNDERLINE GRADIENT */
+.experience-item h3::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #2b71ff, #3ab5ff);
+}
+
+.experience-company {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.experience-time {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.experience-item p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 0px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .experience-section {
+    padding: 60px 40px;
+    gap: 30px;
+  }
+
+  .experience-section .title {
+    font-size: 18px;
+    width: 140px;
+  }
+
+  .experience-wrapper {
+    gap: 30px;
+  }
+
+  .experience-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .experience-section {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+
+  .experience-section .title {
+    font-size: 20px;
+    width: 100%;
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .experience-wrapper {
+    gap: 26px;
+  }
+
+  .experience-card {
+    width: 100%;
+  }
+}
+

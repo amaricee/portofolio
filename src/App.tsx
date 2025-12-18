@@ -3,6 +3,10 @@ import ScrollToTop from "./components/ScrollToTop";
 import Profile from "./components/Profile";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import TechnicalSkills from "./components/TechnicalSkills";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
 
 function App() {
@@ -19,6 +23,10 @@ function App() {
               <Profile />
               <About />
               <Projects />
+              <TechnicalSkills />
+              <Experience />
+              <Contact />
+              <Footer />
             </>
           }
         />

@@ -5,8 +5,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-  background-size: 18px 18px;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-out;
