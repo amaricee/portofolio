@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import project1 from "../assets/peribumi.png";
-import project2 from "../assets/peribumi.png";
-import project3 from "../assets/peribumi.png";
-import project4 from "../assets/peribumi.png";
+import project1 from "../../assets/peribumi.png";
+import project2 from "../../assets/peribumi.png";
+import project3 from "../../assets/peribumi.png";
+import project4 from "../../assets/peribumi.png";
 import "./Projects.css";
 
 function Projects() {

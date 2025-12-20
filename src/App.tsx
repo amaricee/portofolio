@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-import Profile from "./components/Profile";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import TechnicalSkills from "./components/TechnicalSkills";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import ScrollToTop from "./utils/ScrollToTop";
+import {
+  Profile,
+  About,
+  Projects,
+  TechnicalSkills,
+  Experience,
+  Contact,
+  Footer,
+} from "./components";
 import AboutPage from "./pages/AboutPage";
 
 function App() {
@@ -15,11 +17,10 @@ function App() {
       <ScrollToTop />
 
       <Routes>
-        {/* HOME */}
         <Route
           path="/"
           element={
-            <>
+            <div className="home-page fade-in">
               <Profile />
               <About />
               <Projects />
@@ -27,11 +28,9 @@ function App() {
               <Experience />
               <Contact />
               <Footer />
-            </>
+            </div>
           }
         />
-
-        {/* ABOUT FULL PAGE */}
         <Route path="/about" element={<AboutPage />} />
       </Routes>
     </div>

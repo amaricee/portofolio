@@ -1,9 +1,9 @@
-import profileImg from "../assets/foto1.jpeg";
-import goLogo from "../assets/go.svg";
-import reactLogo from "../assets/react.svg";
-import jsLogo from "../assets/js.svg";
-import laravelLogo from "../assets/laravel.svg";
-import mysqlLogo from "../assets/mysql.svg";
+import profileImg from "../../assets/foto1.jpeg";
+import goLogo from "../../assets/go.svg";
+import reactLogo from "../../assets/react.svg";
+import jsLogo from "../../assets/js.svg";
+import laravelLogo from "../../assets/laravel.svg";
+import mysqlLogo from "../../assets/mysql.svg";
 import "./Profile.css";
 
 function Profile() {
