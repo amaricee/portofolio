@@ -7,7 +7,6 @@
   gap: 60px;
 }
 
-/* Kiri */
 .profile-image-container {
   flex: 1;
   display: flex;
@@ -31,7 +30,6 @@
   transform: rotate(-45deg) scale(1.25);
 }
 
-/* Kanan */
 .profile-info {
   flex: 1;
 }
@@ -81,7 +79,6 @@
   margin-bottom: 15px;
 }
 
-/* Logo teknologi */
 .tech-stack {
   display: flex;
   gap: 18px;
@@ -101,8 +98,8 @@
 }
 
 .profile-links {
-  flex-direction: column; /* pastikan vertikal */
-  gap: 12px; /* jarak antara tombol dan teks */
+  flex-direction: column; 
+  gap: 12px;
   margin-top: 20px;
 }
 
@@ -129,12 +126,6 @@
   transform: scale(0.97);
 }
 
-
-/* ====================== */
-/*      RESPONSIVE        */
-/* ====================== */
-
-/* Tablet Landscape (max 1024px) */
 @media (max-width: 1024px) {
   .profile-wrapper {
     gap: 40px;
@@ -151,7 +142,6 @@
   }
 }
 
-/* Tablet Portrait & HP Lebar (max 768px) */
 @media (max-width: 768px) {
   .profile-wrapper {
     flex-direction: column;
@@ -176,7 +166,6 @@
   }
 }
 
-/* HP Kecil (max 480px) */
 @media (max-width: 480px) {
   .profile-wrapper {
     padding: 50px 16px;
@@ -197,7 +186,7 @@
   }
 
   .tech-stack {
-    justify-content: center; /* bikin logo center */
+    justify-content: center;
     gap: 14px;
   }
 

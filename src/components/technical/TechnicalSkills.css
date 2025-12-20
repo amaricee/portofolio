@@ -35,7 +35,6 @@
   flex: 1;
 }
 
-/* Skill item */
 .skill-item h3 {
   font-size: 22px;
   font-weight: 700;
@@ -49,7 +48,6 @@
   width: fit-content;
 }
 
-/* Underline gradient */
 .skill-item h3::after {
   content: "";
   position: absolute;
@@ -68,9 +66,7 @@
   margin-bottom: 0px;
 }
 
-/* 📌 TABLET — 2 KOLOM */
 @media (max-width: 768px) {
-
   .skills-section {
     padding: 60px 40px;
     gap: 30px;
@@ -86,8 +82,8 @@
   .skills-wrapper {
     width: 100%;
     gap: 30px;
-    display: grid;                    /* 🔥 ubah jadi GRID */
-    grid-template-columns: 1fr 1fr;   /* 🔥 2 kolom */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .skill-item {
@@ -99,10 +95,7 @@
   }
 }
 
-
-/* 📌 MOBILE — 1 KOLOM */
 @media (max-width: 480px) {
-
   .skills-section {
     flex-direction: column;
     padding: 50px 30px;
@@ -117,7 +110,7 @@
 
   .skills-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* 🔥 2 kolom */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 

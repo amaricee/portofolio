@@ -7,7 +7,6 @@
   color: #777;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;

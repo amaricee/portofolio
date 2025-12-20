@@ -9,7 +9,7 @@
   transform: translateY(50px);
   transition: all 0.8s ease-out;
   gap: 20px;
-  overflow: hidden; /* supaya animasi rapi */
+  overflow: hidden;
 }
 
 .about-section.show {
@@ -37,8 +37,8 @@
 }
 
 .about-links {
-  flex-direction: column; /* pastikan vertikal */
-  gap: 12px; /* jarak antara tombol dan teks */
+  flex-direction: column;
+  gap: 12px;
 }
 
 .see-more-text {
