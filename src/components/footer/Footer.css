@@ -1,16 +1,57 @@
 .footer {
-  padding: 40px 50px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto; /* kiri & kanan */
   align-items: center;
-  font-size: 14px;
+  padding: 16px 70px; /* tambahkan ruang kiri-kanan agar tidak terlalu pinggir */
   color: #777;
 }
 
-@media (max-width: 600px) {
+.footer-left {
+  justify-self: start; /* kiri */
+}
+
+.footer-center {
+  display: flex;
+  gap: 20px;
+  justify-self: end; /* kanan */
+}
+
+.footer-center a {
+  color: #777;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer-center a:hover {
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
   .footer {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
+    padding: 12px 32px; /* tetap beri ruang pinggir */
+  }
+
+  .footer-center a {
+    font-size: 16px; /* sedikit lebih besar dari sebelumnya */
+  }
+
+  .footer-left {
+    font-size: 14px; /* sedikit lebih besar dari sebelumnya */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px 20px; /* ruang pinggir tetap ada */
+  }
+
+  .footer-center a {
+    font-size: 14px; /* sedikit lebih besar untuk HP kecil */
+  }
+
+  .footer-left {
+    font-size: 12px; /* sedikit lebih besar untuk HP kecil */
   }
 }

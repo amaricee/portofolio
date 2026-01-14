@@ -39,36 +39,73 @@
   font-weight: 800;
   background: linear-gradient(90deg, #2b71ff, #3ab5ff);
   color: transparent;
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
+  margin-top: 25px;
   margin-bottom: 6px;
-}
 
-.wave {
   display: inline-block;
-  animation: wave-emoji 1.8s infinite ease-in-out;
-  transform-origin: 70% 70%;
-  color: yellow;
+  white-space: nowrap;
+  overflow: hidden;
+
+  border-right: 3px solid #3ab5ff;
+
+  animation:
+    typing 4s steps(20, end) infinite,
+    cursor-blink 4s infinite;
 }
 
-@keyframes wave-emoji {
+@keyframes typing {
   0% {
-    transform: rotate(0deg);
+    clip-path: inset(0 100% 0 0);
   }
-  15% {
-    transform: rotate(18deg);
+  35% {
+    clip-path: inset(0 0 0 0);
   }
-  30% {
-    transform: rotate(-12deg);
+
+  65% {
+    clip-path: inset(0 0 0 0);
   }
+
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+
+
+
+@keyframes cursor-blink {
+  0%,
+  35% {
+    border-right-color: #3ab5ff;
+  }
+
   45% {
-    transform: rotate(18deg);
+    border-right-color: transparent;
+  }
+
+  50% {
+    border-right-color: #3ab5ff;
+  }
+
+  55% {
+    border-right-color: transparent;
   }
   60% {
-    transform: rotate(0deg);
+    border-right-color: #3ab5ff;
   }
+
+  65% {
+    border-right-color: transparent;
+  }
+
+  70% {
+    border-right-color: #3ab5ff;
+  }
+
   100% {
-    transform: rotate(0deg);
+    border-right-color: #3ab5ff;
   }
 }
 
@@ -98,7 +135,7 @@
 }
 
 .profile-links {
-  flex-direction: column; 
+  flex-direction: column;
   gap: 12px;
   margin-top: 20px;
 }

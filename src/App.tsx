@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./utils/ScrollToTop";
 import {
+  Navbar,
   Profile,
   About,
   Projects,
-  TechnicalSkills,
   Experience,
-  Contact,
   Footer,
 } from "./components";
 import AboutPage from "./pages/AboutPage";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   return (
@@ -21,17 +21,17 @@ function App() {
           path="/"
           element={
             <div className="home-page fade-in">
+              <Navbar />
               <Profile />
               <About />
               <Projects />
-              <TechnicalSkills />
               <Experience />
-              <Contact />
               <Footer />
             </div>
           }
         />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
       </Routes>
     </div>
   );

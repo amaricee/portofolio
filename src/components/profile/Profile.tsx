@@ -16,9 +16,7 @@ function Profile() {
       </div>
 
       <div className="profile-info">
-        <h1 className="name">
-          <span className="wave">👋</span> Hi, I'm Rama
-        </h1>
+        <h1 className="name typing">Hi, I'm Rama</h1>
 
         <p className="subtitle">Web Developer & Creative Learner</p>
 

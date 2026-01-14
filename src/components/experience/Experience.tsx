@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./Experience.css";
 
 function Experience() {
-const experienceRef = useRef<HTMLDivElement | null>(null);
+  const experienceRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const el = experienceRef.current;
@@ -23,30 +23,38 @@ const experienceRef = useRef<HTMLDivElement | null>(null);
   }, []);
 
   return (
-    <section className="experience-section" ref={experienceRef}>
+    <section id="experience" className="experience-section" ref={experienceRef}>
       <h2 className="title">EXPERIENCE</h2>
 
       <div className="experience-wrapper">
         <div className="experience-item">
           <h3>Web Developer</h3>
           <span className="experience-company">PT Peribumi Cahaya Nusa</span>
-          <span className="experience-time">2024 – 2025</span>
+          <span className="experience-time">Oct 2024 – Jan 2025</span>
           <p>
-            Developed and maintained a training & certification website using
-            Laravel 11, MySQL, and real-time features with Socket.IO. Worked on
-            FAQ system, personal chat, and product management features.
+            - Website Development of Peri Bumi Consultant (Konsultanqta.com)
           </p>
+          <p>
+            - Developed Authentication and Email Verification features using
+            Laravel 11
+          </p>
+          <p>- Database management with MySQL</p>
         </div>
 
         <div className="experience-item">
-          <h3>Freelance Web Developer</h3>
-          <span className="experience-company">Self-Employed</span>
-          <span className="experience-time">2023 – Present</span>
-          <p>
-            Built several web applications and portfolio projects using React,
-            JavaScript, and Laravel. Focused on clean UI, responsive layouts, and
-            efficient backend logic.
+          <h3>Frontend & Backend Web Developer</h3>
+          <span className="experience-company">PT Presentologic</span>
+          <span className="experience-time">Aug 2023 – Jan 2024</span>
+          <p>- MSIB Batch 5</p>
+          <p>- 
+            Successfully implemented, tested, and optimized Progressive Web Apps
+            (PWA) in a Restaurant Catalog Application as a Final Project
           </p>
+          <p>- 
+            Utilized Webpack as a module bundler and Node.js as the runtime
+            environment in application development
+          </p>
+          <p>- Gained knowledge in building high-performance websites</p>
         </div>
       </div>
     </section>
